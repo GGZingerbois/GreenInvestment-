@@ -1,0 +1,444 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+*{ 
+    margin: 0px;
+    padding: 0px;
+    font-family:Montserrat;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+/*nav bar*/
+.container{
+    background: black;
+    text-align:center;
+    padding: 0 2.5%;
+}
+li, a, button{
+    font-weight: 500;
+    font-size: 1em;
+    color: #edf0f1;
+    text-decoration: none;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    padding: 1% 10%;
+}
+
+nav ul a{
+    float:left;
+    margin: 0.7em 0.3em;
+
+}
+
+nav ul a li{
+    color: white;
+    background-color:inherit;
+    text-align:center;
+}
+
+nav ul a li:hover{
+    background: #fafafa;
+    border-radius: 40px;
+    transition: 0.2s ease;
+    color:#000;
+}
+.logo{
+    cursor: pointer;
+    margin-right: auto;
+    width:3%;
+    height:3%;
+    /* margin-top:0.75%;
+    margin-left: 0.5%; */
+}
+
+button{
+    padding: 9px 25px;
+    background-color: rgba(0,126,169,1);
+    border: none;
+    border-radius:50px ;
+    cursor: pointer;
+    transition:all 0.3s ease 0s ;
+}
+button:hover{
+    background-color: rgba(0,126,169,0.8);
+
+}
+/*nav end*/
+
+body{
+    margin: 0;
+    padding: 0%;
+}
+
+p, blockquote {
+    font-size: 01em;
+    font-family: "Montserrat";
+    font-weight:400;
+    line-height: 1.6em;
+}
+
+ul{
+    list-style-type: none;
+    margin:0;
+    padding:0;
+}
+
+a{
+    text-decoration: none;
+}
+
+/*Main window*/
+.bannerarea{
+    width: 100%;
+    height: 100vh;
+    background: rgba(0,0,0,0.7) url(6-62856_healthy-food-wallpaper-1080p-is-cool-wallpapers-data.jpg);
+    background-size: cover;
+    background-blend-mode:soft-light;
+
+}
+.content-area{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content{
+    text-align: center;
+}
+.content h1{
+    font-size:80px;
+    color: 	#778899;
+
+}
+.content p{
+    font-size: 30px;
+    color: #9d9d9d;
+}
+/*End main window*/
+
+
+
+/*slider*/
+.image-slider{
+    margin: 0;
+    padding: 0%;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0,0,0,0.7) url(zz.jpg);
+    background-size:80vh;
+    background-blend-mode:soft-light;
+}
+   
+
+.slider{
+    width: 800px;
+    height:500px;
+    border-radius: 10px;
+    overflow:hidden;
+
+}
+.slides{
+    width:500;
+    height: 500px;
+    display: flex;
+}
+
+.slides input{
+    display: none;
+    
+}
+.slide{
+    width: 800px;
+    transition: 3s;
+
+}
+.slide img{
+    width: 800px;
+    height: 500px;
+
+}
+
+/* css for manual image slider*/
+.navigation-manual{
+    position:absolute;
+    width: 800px;
+    margin-top: -40px;
+    display: flex;
+    justify-content: center;
+}
+.manual-btn{
+  border: 2px solid red;  
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 2s;
+}
+.manual-btn:not(:last-child){
+    margin-right: 40px;
+}
+.manual-btn:hover{
+    background:red;
+}
+#radio1:checked ~ .first{
+    margin-left: 0;
+
+}
+#radio2:checked ~ .first{
+    margin-left: -100%;
+    
+}
+#radio3:checked ~ .first{
+    margin-left: -200%;
+    
+}
+#radio4:checked ~ .first{
+    margin-left: -300%;
+    
+}
+
+/*css for automatic navigation*/
+
+.navigation-auto{
+    position:absolute;
+    width: 800px;
+    margin-top: 460px;
+    display: flex;
+    justify-content: center;
+
+}
+
+.navigation-auto div{
+    border:2px solid red ;
+    padding: 5px;
+    border-radius: 10px;
+    transition: 2s;
+
+}
+.navigation-auto div:not(:last-child){
+    margin-right: 40px;
+    
+}
+#radio1:checked ~ .navigation-auto .auto-btn1{
+    background: red;
+
+}
+
+#radio2:checked ~ .navigation-auto .auto-btn2{
+    background: red;
+    
+}
+
+#radio3:checked ~ .navigation-auto .auto-btn3{
+    background: red;
+    
+}
+
+#radio4:checked ~ .navigation-auto .auto-btn4{
+    background: red;
+    
+}
+/* end of automatic navigation*/
+/* start of card slider */
+
+.card-slider{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: rgba(0,0,0,0.7) url(YYGLjYi.jpg);
+    background-size:80vh;
+    background-blend-mode:soft-light;
+}
+
+.card-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 30px;
+}
+.card{
+    position: relative;
+    background: #e4e1d8 ;
+    max-width: 325px;
+    height: auto;
+    margin: 25px;
+    box-shadow: 0 5px 25px rgb(1 1 1 / 20%);
+    border-radius:10px;
+    overflow: hidden;
+    transition: 1.75s;
+    display:block;
+    text-decoration: none;
+}
+.card:hover{
+    transform:scale(1.15);
+}
+.card-image{
+    max-height: 200px;
+}
+.card-image img{
+    max-width: 100%;
+    height: auto;
+
+}
+.card-info{
+    position: relative;
+    color: #222;
+    padding: 10px 20px 20px;
+}
+.card-info h3{
+    font-size: 1.8em;
+    font-weight: 800;
+    margin-bottom: 5px;
+}
+.card-info p{
+    font-size: 1em;
+    margin-bottom: 5px;
+}
+.pagination{
+    text-align: center;
+    margin: 30px 30px 60px;
+    user-select: none;
+
+}
+.pagination li{
+    display: inline-block;
+    margin: 5px;
+    box-shadow: 0 5px 25px rgb(1 1 1 / 10%);
+}
+.pagination li a{
+    color:#fff;
+    text-decoration: none;
+    font-size: 1.2em;
+    line-height: 45px;
+}
+
+.previous-page, .next-page{
+    background: #E52B50;
+    width: 80px;
+    border-radius: 45px;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+
+.previous-page:hover{
+    transform: translateX(-5px);
+}
+.next-page:hover{
+    transform: translateX(5px);
+}
+
+.current-page, .dots{
+    background: #ccc;
+    width: 45px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.3 ease;
+}
+.current-page:hover, .dots:hover{
+    transform: translateY(-5px);
+
+}
+.active{
+    background: #E52B50;
+}
+.disable{
+    background: #ccc;
+
+}
+/* end of card slider */
+/*Start of Ryans Footer*/
+.container2.O{
+	max-width: 1000 px;
+	margin:auto;
+}
+.row{
+	display: flex;
+	flex-wrap: wrap;
+}
+ul{
+	list-style: none;
+}
+.footer{
+	background-color: #24262b;
+    padding: 70px 0;
+}
+.footer-col{
+   width: 25%;
+   padding: 0 15px;
+}
+.footer-col h4{
+	font-size: 18px;
+	color: #ffffff;
+	text-transform: capitalize;
+	margin-bottom: 35px;
+	font-weight: 500;
+	position: relative;
+}
+.footer-col h4::before{
+	content: '';
+	position: absolute;
+	left:0;
+	bottom: -10px;
+	background-color: #e91e63;
+	height: 2px;
+	box-sizing: border-box;
+	width: 50px;
+}
+.footer-col ul li:not(:last-child){
+	margin-bottom: 10px;
+}
+.footer-col ul li a{
+	font-size: 16px;
+	text-transform: capitalize;
+	color: #ffffff;
+	text-decoration: none;
+	font-weight: 300;
+	color: #bbbbbb;
+	display: block;
+	transition: all 0.3s ease;
+}
+.footer-col ul li a:hover{
+	color: #ffffff;
+	padding-left: 8px;
+}
+.footer-col .social-links a{
+	display: inline-block;
+	height: 40px;
+	width: 40px;
+	background-color: rgba(255,255,255,0.2);
+	margin:0 10px 10px 0;
+	text-align: center;
+	line-height: 40px;
+	border-radius: 50%;
+	color: #ffffff;
+	transition: all 0.5s ease;
+}
+.footer-col .social-links a:hover{
+	color: #24262b;
+	background-color: #ffffff;
+}
+
+/*responsive*/
+@media(max-width: 767px){
+  .footer-col{
+    width: 50%;
+    margin-bottom: 30px;
+}
+}
+@media(max-width: 574px){
+  .footer-col{
+    width: 100%;
+}
+}
+/* end of Ryan's footer*/
+
+
